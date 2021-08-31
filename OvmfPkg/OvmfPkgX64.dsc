@@ -701,7 +701,9 @@
       PcdLib|MdePkg/Library/BasePcdLibNull/BasePcdLibNull.inf
   }
   MdeModulePkg/Core/DxeIplPeim/DxeIpl.inf
-
+#luqiuhuan-2021/08/31-add>>
+  OvmfPkg/LqhTest/LqhTestPei/LqhTestPei.inf
+#luqiuhuan-2021/08/31-add<<
   OvmfPkg/PlatformPei/PlatformPei.inf
   UefiCpuPkg/Universal/Acpi/S3Resume2Pei/S3Resume2Pei.inf {
     <LibraryClasses>
@@ -857,7 +859,10 @@
 !endif
   OvmfPkg/QemuRamfbDxe/QemuRamfbDxe.inf
   OvmfPkg/VirtioGpuDxe/VirtioGpu.inf
-
+#luqiuhuan-2021/08/31-add>>
+  OvmfPkg/LqhTest/LqhTestDxe/LqhTestDxe.inf
+  OvmfPkg/LqhTest/OutputMyNameApp/OutputMyNameApp.inf
+#luqiuhuan-2021/08/31-add<<
   #
   # ISA Support
   #

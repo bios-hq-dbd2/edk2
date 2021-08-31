@@ -1,0 +1,58 @@
+## @file
+#  Sample UEFI Application Reference EDKII Module.
+#
+#  This is a sample shell application that will print "UEFI Hello World!" to the
+#  UEFI Console based on PCD setting.
+#
+#  It demos how to use EDKII PCD mechanism to make code more flexible.
+#
+#  Copyright (c) 2008 - 2017, Intel Corporation. All rights reserved.<BR>
+#
+#  This program and the accompanying materials
+#  are licensed and made available under the terms and conditions of the BSD License
+#  which accompanies this distribution. The full text of the license may be found at
+#  http://opensource.org/licenses/bsd-license.php
+#  THE PROGRAM IS DISTRIBUTED UNDER THE BSD LICENSE ON AN "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR REPRESENTATIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED.
+#
+#
+##
+
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = LqhTestDxe
+  FILE_GUID                      = 0a02442c-72c7-4112-bae5-89dd0ce82191
+  MODULE_TYPE                    = DXE_DRIVER
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = LqhTestDxeEntrypoint
+
+
+[Sources]
+  LqhTestDxe.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  OvmfPkg/OvmfPkg.dec
+
+[LibraryClasses]
+  UefiRuntimeServicesTableLib
+  UefiBootServicesTableLib
+  UefiDriverEntryPoint
+  UefiLib
+  HobLib
+  DebugLib
+  BaseLib
+  BaseMemoryLib
+  PrintLib
+  DevicePathLib
+  MemoryAllocationLib
+  PcdLib
+
+[Guids]
+  gLqhTestHobGuid
+  gLqhTestVariableGuid
+
+[Depex]
+  TRUE
+
